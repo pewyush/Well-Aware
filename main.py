@@ -7,4 +7,3 @@ import yfinance as yf
 
 
 print("Sucessfully imported libraries")
-
