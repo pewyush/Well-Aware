@@ -3,9 +3,8 @@ import yfinance as yf
 import pandas as pd
 import os
 
-os.makedirs('../data/raw', exist_ok=True)
+os.makedirs('./data/raw', exist_ok=True)
 
-# List of 10 major Indian stock tickers (NSE)
 tickers = [
     'RELIANCE.NS',  # Reliance Industries
     'INFY.NS',      # Infosys
@@ -21,7 +20,6 @@ tickers = [
 
 print("Downloading data for 10 major Indian stocks...")
 
-# Download data for each ticker
 for ticker in tickers:
     print(f"Downloading: {ticker}")
     try:
