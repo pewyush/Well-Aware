@@ -4,7 +4,7 @@ import numpy as np
 from financial_models import MODELS  # pulls from __init__.py
 
 st.set_page_config(page_title="Financial Models", layout="wide")
-st.title("📈 Financial Modeling Dashboard")
+st.title("Financial Modeling Dashboard")
 
 # Sidebar - choose model
 model_choice = st.sidebar.selectbox("Select a Model", list(MODELS.keys()))
