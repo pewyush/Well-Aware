@@ -3,6 +3,9 @@ import numpy as np
 import pandas as pd
 from financial_models import MODELS
 from ml_models import ML_MODELS, predict_next_day_close
+from pathlib import Path
+
+parent_root = Path.cwd().parent
 
 st.set_page_config(page_title="Financial Models", layout="wide")
 st.title("Financial Modeling Dashboard")
@@ -66,5 +69,5 @@ if st.button(f"Predict Next Day Close"):
     st.write(f"Predicted Next Day Close for {selected_ticker}: **{prediction:.2f}**")
 
     # Optional: plot last 50 historical closes
-    df = pd.read_csv(f"data/processed/{selected_ticker}.csv")
+    df = pd.read_csv(f"{parent_root}/data/processed/{selected_ticker}.NS_prices_processed.csv")
     st.line_chart(df[["Close"]].tail(50))
